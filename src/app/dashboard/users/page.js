@@ -3,9 +3,6 @@ import React from "react";
 import useUsersData from "@/hooks/useUsersData";
 import UserDataTable from "./UserDataTable";
 
-export const metadata = {
-  title: " Dashboard | Users",
-};
 const UsersPage = () => {
   const [userDatas, refetch] = useUsersData();
   return (

@@ -3,10 +3,6 @@ import React from "react";
 import TableContent from "./TableContent";
 import useVolunteerData from "@/hooks/useVolunteerData";
 
-export const metadata = {
-  title: " Dashboard | Voluanteer",
-};
-
 const VoluanteerPage = () => {
   const [voluanterrsData, refetch] = useVolunteerData();
 
