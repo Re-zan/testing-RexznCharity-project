@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.my_container {
+  @apply mx-auto sm:max-w-screen-sm  md:max-w-screen-md lg:max-w-screen-xl;
+}
+
+.hover_transtion_effect {
+  @apply transition ease-in-out duration-500  hover:-translate-y-3 hover:shadow-2xl;
+}
