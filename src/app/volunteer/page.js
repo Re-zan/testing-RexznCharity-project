@@ -10,11 +10,6 @@ import { useForm } from "react-hook-form";
 import useAxios from "@/hooks/useAxios";
 import { Toaster, toast } from "react-hot-toast";
 
-//page title
-export const metadata = {
-  title: "Re-zanCharity | Events",
-};
-
 const VolunteerPage = () => {
   //animation
   useEffect(() => {
