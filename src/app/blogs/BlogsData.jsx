@@ -7,7 +7,7 @@ const BlogsData = () => {
   const blogsData = useBlogs();
 
   return (
-    <div className="grid  grid-cols-2 lg:grid-cols-4 gap-10 p-3 lg:p-0 my-20 my_container">
+    <div className="grid  grid-cols-2 lg:grid-cols-4 gap-10 p-4 lg:p-0 my-20 my_container">
       {blogsData?.map((items) => (
         <CardDesign items={items} key={items._id}></CardDesign>
       ))}
