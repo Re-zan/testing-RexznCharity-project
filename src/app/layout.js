@@ -5,6 +5,10 @@ import Footer from "@/components/Footer";
 import ReactTanStackQueryProvider from "@/Provider/ReactTanStackQueryProvider";
 import AuthProviders from "@/Provider/AuthProviders";
 
+export const metadata = {
+  title: "Re-zanCharity | Home",
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

@@ -14,11 +14,25 @@ const TableContent = ({ item, idx, refetch }) => {
       .put(`/vlounters/voluanteer/${_id}`)
       .then((res) => {
         if (res.data.modifiedCount > 0) {
-          refetch();
           toast.success(`${name} is now a voluanteer`);
+          refetch();
         }
       })
       .catch((error) => console.log(error.message));
+  };
+  //delete item
+  const handleDeleteVlouanteer = (_id) => {
+    basicRoute
+      .delete(`/vlounters/${_id}`)
+      .then((res) => {
+        if (res.data.deletedCount > 0) {
+          toast.success(`Data is deleted`);
+          refetch();
+        }
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
   };
   return (
     <tr key={idx}>
@@ -43,12 +57,20 @@ const TableContent = ({ item, idx, refetch }) => {
           <p className=" text-green-600 text-center"> {role}</p>
         ) : (
           <button
-            className="py-2 leading-none px-3 font-medium text-red-600 hover:text-red-500 duration-150 hover:bg-gray-50 rounded-lg"
+            className="py-2 leading-none px-3 font-medium text-sky-600 hover:text-sky-500 duration-150 hover:bg-gray-50 rounded-lg"
             onClick={() => handleMakeVlouanteer(_id)}
           >
             Make Voluanteer
           </button>
         )}
+      </td>
+      <td className="px-6 py-4 whitespace-nowrap">
+        <button
+          className="py-2 leading-none px-3 font-medium text-red-600 hover:text-red-500 duration-150 hover:bg-gray-50 rounded-lg"
+          onClick={() => handleDeleteVlouanteer(_id)}
+        >
+          Delete
+        </button>
       </td>
     </tr>
   );

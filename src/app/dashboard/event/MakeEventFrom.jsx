@@ -40,9 +40,9 @@ const MakeEventFrom = ({ refetch }) => {
             })
             .then((res) => {
               if (res.data.acknowledged) {
+                toast.success("Your Data Has Been Send Successfully!");
                 reset();
                 refetch();
-                toast.success("Your Data Has Been Send Successfully!");
               }
             })
             .catch((error) => {
@@ -115,8 +115,8 @@ const MakeEventFrom = ({ refetch }) => {
 
           <div className=" form-control w-full my-6  rounded-xl border border-[#999999] p-1">
             <input
-              type="data"
-              min="2018-01-01"
+              type="date"
+              min={new Date().toISOString().split("T")[0]}
               max="2050-12-31"
               placeholder="Enter Your date"
               className="input rounded-none w-full p-2 "

@@ -9,6 +9,8 @@ export const generateMetadata = async ({ params }) => {
     title: `Event | ${title}`,
   };
 };
+
+export const revalidate = 0;
 const SingleEventPage = async ({ params }) => {
   //get data
   const { title, short_title, description, image, date, location } =

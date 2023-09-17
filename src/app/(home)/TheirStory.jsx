@@ -18,57 +18,14 @@ import TheirSingleStory from "./TheirSingleStory";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import useStoryData from "@/hooks/useStoryData";
 
 const TheirStory = () => {
   useEffect(() => {
     AOS.init();
   }, []);
 
-  const heartwarmingStories = [
-    {
-      id: 1,
-      name: "Sophia's Journey to Education",
-      age: 8,
-      story:
-        "Sophia, a bright 8-year-old, dreamed of going to school. With your support, she now attends school daily and aspires to become a teacher.",
-    },
-    {
-      id: 2,
-      name: "Daniel's Nutritious Meals",
-      age: 6,
-      story:
-        "Daniel, a 6-year-old, used to go hungry. Thanks to our nutrition programs, he now enjoys healthy meals, growing strong and full of energy.",
-    },
-    {
-      id: 3,
-      name: "Lina's Journey to Health",
-      age: 5,
-      story:
-        "Lina, a 5-year-old, struggled with health issues. Our healthcare services provided her with medical care, and she's now thriving and full of smiles.",
-    },
-    {
-      id: 4,
-      name: "Raj's Dream Come True",
-      age: 10,
-      story:
-        "Raj, a 10-year-old with a passion for art, received art supplies through our programs. He now creates beautiful artwork and dreams big.",
-    },
-    {
-      id: 5,
-      name: "Ella's Safe Shelter",
-      age: 7,
-      story:
-        "Ella, a 7-year-old, and her family were homeless. Your support provided them with shelter, and Ella now has a safe and warm home.",
-    },
-    {
-      id: 6,
-      name: "Ahmed's Hope for the Future",
-      age: 9,
-      story:
-        "Ahmed, a 9-year-old, faced adversity but found hope through our programs. He's now determined to build a better future for himself.",
-    },
-  ];
-
+  const storyDatas = useStoryData();
   return (
     <section className="my_container my-20 grid grid-cols-1 md:grid-cols-2 gap-20">
       <div
@@ -88,7 +45,7 @@ const TheirStory = () => {
           modules={[Pagination]}
           className="mySwiper"
         >
-          {heartwarmingStories?.map((items, index) => (
+          {storyDatas?.map((items, index) => (
             <SwiperSlide key={index}>
               <TheirSingleStory items={items} key={items.id}></TheirSingleStory>
             </SwiperSlide>

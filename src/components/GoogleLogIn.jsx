@@ -23,6 +23,7 @@ const GoogleLogIn = () => {
           .post("/users", {
             name: user.displayName,
             email: user.email,
+            image: user.photoURL,
           })
           .then((res) => router.push("/"))
           .catch((error) => {

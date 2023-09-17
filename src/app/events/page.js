@@ -9,7 +9,7 @@ import CardDesign from "@/components/EventsAndBlogsCard/CardDesign";
 export const metadata = {
   title: "Re-zanCharity | Events",
 };
-
+export const revalidate = 0;
 const Eventpages = async () => {
   const data = await getEventData();
   const eventsData = data?.filter(

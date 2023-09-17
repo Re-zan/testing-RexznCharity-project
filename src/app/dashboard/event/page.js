@@ -1,4 +1,4 @@
-import EventContent from "./EventContent";
+import EventCreateTable from "./EventCreateTable";
 
 export const metadata = {
   title: " Dashboard | Events",
@@ -6,7 +6,7 @@ export const metadata = {
 const EventPage = () => {
   return (
     <div className="max-w-screen-xl  px-4 md:px-8">
-      <EventContent></EventContent>
+      <EventCreateTable></EventCreateTable>
     </div>
   );
 };

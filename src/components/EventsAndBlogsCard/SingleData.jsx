@@ -18,9 +18,9 @@ const SingleData = ({
       <Image
         src={image}
         width={1300}
-        height={300}
+        height={100}
         alt={title}
-        className="mx-auto "
+        className="mx-auto object-cover h-[550px]"
       ></Image>
       <div className="flex items-center justify-between py-3 text-[#5c5b5c]">
         <p>{short_title}</p>

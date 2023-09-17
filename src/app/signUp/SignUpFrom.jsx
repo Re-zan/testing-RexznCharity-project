@@ -59,7 +59,7 @@ const SignUpFrom = () => {
                   name: data.name,
                   email: data.email,
                   password: data.password,
-                  age: parseInt(data.age),
+
                   image: ImageUrl,
                 })
                 .then((res) => {
@@ -132,20 +132,7 @@ const SignUpFrom = () => {
             This feild cann't be empty
           </p>
         )}
-        {/* age  */}
-        <div className=" form-control w-full my-8  rounded-xl border border-[#999999] p-1">
-          <input
-            type="number"
-            placeholder="Enter Your age"
-            className="input rounded-none w-full p-4 "
-            {...register("age", { required: true })}
-          />
-        </div>
-        {errors.age?.type === "required" && (
-          <p className=" text-red-800 text-center py-1">
-            This feild cann't be empty
-          </p>
-        )}
+
         {/* password  */}
         <div className=" form-control w-full my-8  rounded-xl border border-[#999999] p-6">
           <input

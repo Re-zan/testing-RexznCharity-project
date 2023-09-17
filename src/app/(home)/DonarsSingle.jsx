@@ -9,7 +9,7 @@ const DonarsSingle = ({ items }) => {
   useEffect(() => {
     AOS.init();
   }, []);
-  const { name, age, image, donation_amount, small_info } = items;
+  const { name, image, donation_amount, message } = items;
   return (
     <div>
       <div
@@ -25,13 +25,14 @@ const DonarsSingle = ({ items }) => {
             <h2 className={`${pacifico.className} text-sm md:text-2xl `}>
               Name: {name}
             </h2>
-            <p className={`${pacifico.zila}  hidden lg:block text-md`}>
-              {small_info}
+            <p
+              className={`${pacifico.zila}  hidden lg:block text-md w-[750px]`}
+            >
+              {message}
             </p>
             <p className={`${pacifico.zila}  md:text-md`}>
               Donated : $ {donation_amount}
             </p>
-            <p className={`${pacifico.zila}  text-md`}>Age: {age}</p>
           </div>
         </div>
         {image && (

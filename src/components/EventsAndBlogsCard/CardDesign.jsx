@@ -24,7 +24,6 @@ const CardDesign = ({ items }) => {
             {image && (
               <Image
                 src={image}
-                layout="responsive"
                 alt="Our Team "
                 width={800}
                 height={500}
@@ -56,7 +55,6 @@ const CardDesign = ({ items }) => {
             {image && (
               <Image
                 src={image}
-                layout="responsive"
                 alt="Our Team "
                 width={800}
                 height={500}

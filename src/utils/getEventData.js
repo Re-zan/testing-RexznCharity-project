@@ -8,3 +8,15 @@ const getEventData = async () => {
 };
 
 export default getEventData;
+
+// const getEventData = async () => {
+//   const res = await fetch(
+//     `https://re-zancharity-server-side.vercel.app/events`,
+//     {
+//       cache: "",
+//     }
+//   );
+//   return res.data;
+// };
+
+// export default getEventData;
